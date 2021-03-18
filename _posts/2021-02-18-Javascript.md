@@ -40,4 +40,50 @@ HTML과 CSS로 정적인 페이지를 만들고 그위에 상호작용하는 요
 - Flow : TypeScript와는 다른방식으로 자료형을 강제한다.
 - Dart : 모바일 앱과 같이 브라우저가 아닌 환경에서 동작하는 고유의 엔진을 가진 독자적 언어이다.
 
+## 브라우저의 동작방식과 script의 위치
+
+>브라우저의 동작 방식
+1. HTML을 파싱한다.
+2. DOMtree를 생성한다.
+3. Rendertree(Domtree + CSSOMtree)를 생성한다.
+4. Display에 표시한다.
+
+이때, 브라우저는 HTML을 읽어가다가 <scrpit> 태그를 만나면 파싱을 중단하고 Javascript파일을 로드한 후 HTML을 이어나간다. 
+![image](https://user-images.githubusercontent.com/64571546/111636028-7312ec00-883b-11eb-93fc-09cb05c1028d.png)
+
+이렇게 되면 Javascript가 생성되지 않은 DOM을 조작할 수 있기 때문에 스크립트 태그의 위치는 중요하다.
+  
+### 1. body의 최하단에 위치시키기 
+  body를 다 읽고나서 스크립트를 실행시킨다.
+### 2. <script defer src="script.js">
+  defer 속성이 더해진 script는 html파싱이 완료된후 실행된다.
+  ![image](https://user-images.githubusercontent.com/64571546/111636511-e9175300-883b-11eb-8296-90821d943c3e.png)
+  
+### 3. DOMContentLoaded, onload
+  - DOMContentLoaded: DOM 생성이 끝난 후
+  - onload: 문서에 포함된 모든 콘텐츠(...img, css)이 로드된 후
+
+  ```
+  <script>
+    	// window.onload가 가장 앞에 위치!
+        window.onload = function(){
+            console.log("afterwindowload");
+            var target = document.querySelector("#test");
+            console.log(target);
+        }
+		// DOMContentLoaded가 두번째에 위치!
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("afterdomload");
+            var target = document.querySelector('#test');
+            console.log(target);
+        });
+		// 일반 script 코드가 가장 끝에 위치
+        console.log("바로시작")
+        var target = document.querySelector('#test');
+        console.log(target);
+    </script>
+  ```
+  ![image](https://user-images.githubusercontent.com/64571546/111636693-0fd58980-883c-11eb-9b02-cb30f0bd0949.png)
+
+
 출처 : [https://ko.javascript.info/intro](https://ko.javascript.info/intro)
