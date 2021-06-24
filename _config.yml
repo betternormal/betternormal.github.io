@@ -1,7 +1,6 @@
 # Site settings
 title:          praconfi
 description:    "Practice and be confident."
-baseurl:        "/tale"
 url:            "https://praconfi.github.io"
 
 # Google Analytics
@@ -11,7 +10,7 @@ google_analytics: UA—XXXXXXXX-X
 author:
   name:         Ben Kim
   url:          https://praconfi.github.io
-  email:        chesterhow@gmail.com
+  email:        praconfi@gmail.com
 
 # Build settings
 markdown:       kramdown
