@@ -1,3 +1,10 @@
+---
+layout: post
+title: "findMedianSortedArrays Post"
+author: "praconfi"
+tags: algorithm
+---
+
 # findMedianSortedArrays
 
 ##  my answer
