@@ -2,7 +2,7 @@
 layout: post
 title: "reverseInteger"
 author: "praconfi"
-tags: algorithm
+tags: leetcode
 ---
 # findMedianSortedArrays
 

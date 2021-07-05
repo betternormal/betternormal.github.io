@@ -1,3 +1,10 @@
+---
+layout: post
+author: "praconfi"
+tags: Javascript book
+title: "Modern Javascript"
+---
+
 # 1.  자바스크립트의 개요
 
 ### **프로그래밍 언어의 분류**

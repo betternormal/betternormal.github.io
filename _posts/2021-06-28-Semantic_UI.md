@@ -2,7 +2,7 @@
 layout: post
 title: " Semantic UI"
 author: "praconfi"
-tags: translate
+tags: Translate
 ---
 
 # Semantic UI 공식문서 번역

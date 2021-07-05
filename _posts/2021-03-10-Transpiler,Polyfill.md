@@ -1,3 +1,10 @@
+---
+layout: post
+author: "praconfi"
+tags: web Javascript
+title: "Transpiler, Pollyfill"
+---
+
 # **등장배경**
 
 과거 ES3이 공개되었을 땐 여러 웹 브라우저들의 독자 표준이 정리되어 있지 않은 상황이었다. 그래서 이 시절에는 어느 브라우저를 사용하든 잘 동작하는 JavaScript 코드를 짜는 브라우저 간 호환성(크로스 브라우징)을 확보하는 것이 웹 개발자들에게 큰 고민거리중 하나 였다.

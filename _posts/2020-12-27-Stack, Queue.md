@@ -1,8 +1,13 @@
 ---
+layout: post
+author: "praconfi"
 title: "Stack, Queue"
 date: 2020-12-27 11:25
 categories: DataStructure 
+tags: DataStructure
 ---
+
+
 
 스택과 큐는 실생활에서도 흔히 볼 수 있는 형태의 자료구조로 간단한 자료구조이다.
 

@@ -2,7 +2,7 @@
 layout: post
 title: "basic of typescript"
 author: "praconfi"
-tags: typescript
+tags: Typescript
 ---
 
 > ## 타입스크립트란?

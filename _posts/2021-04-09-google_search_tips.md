@@ -1,3 +1,10 @@
+---
+layout: post
+author: "praconfi"
+tags: tips
+title: "Google search tips"
+---
+
 ## 1. 정확한 내용검색
 만약 검색하려는 내용이 모두 담겨있고, 내용의 단어들 순서 까지 일치하는 결과를 검색하려면 "inbound marketing" 이렇게 따옴표 안에 입력해야 정확한 결과를 얻을 수 있다.
 

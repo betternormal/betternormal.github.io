@@ -2,7 +2,7 @@
 layout: post
 title: "palindromNumber"
 author: "praconfi"
-tags: algorithm leetcode
+tags: leetcode
 ---
 
 # palindromNumber

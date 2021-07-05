@@ -2,7 +2,7 @@
 layout: post
 title: "findMedianSortedArrays Post"
 author: "praconfi"
-tags: algorithm
+tags: leetcode
 ---
 
 # findMedianSortedArrays
