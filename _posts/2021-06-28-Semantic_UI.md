@@ -1,3 +1,10 @@
+---
+layout: post
+title: " Semantic UI"
+author: "praconfi"
+tags: translate
+---
+
 # Semantic UI 공식문서 번역
 
 ## 1. Introduction
