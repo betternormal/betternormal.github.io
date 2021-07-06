@@ -1,3 +1,10 @@
+---
+layout: post
+title: "basic of typescript"
+author: "praconfi"
+tags: Typescript
+---
+
 > ## 타입스크립트란?
 - microsoft사에서 만든 자바스크립트의 superset
 - 다양한 버전의 자바스크립트로 트랜스파일 된다.

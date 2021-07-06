@@ -1,3 +1,10 @@
+---
+layout: post
+author: "praconfi"
+tags: Javascript 
+title: "basic of Javascript"
+---
+
 # Javascript
 
 > 자바스크립트는 웹페이지에 생동감을 불어넣기 위해 만들어진 프로그래밍 언어이다.
