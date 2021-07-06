@@ -4,9 +4,14 @@
   {% include head.html %}
 
   <body>
-
+    {% assign current = page.url | downcase | split: '/' %}
     {% include navigation.html %}
+    <!-- {{ current | jsonify }} -->
+    {% if current[0] != "" %}
+        {% include wallpaper.html %}
+    {% endif %}
 
+    <div class="catalogue">
     <main>
       {{ content }}
     </main>
