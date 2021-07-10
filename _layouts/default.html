@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
   {% include head.html %}
 
   <body>
     {% assign current = page.url | downcase | split: '/' %}
     {% include navigation.html %}
+
+    <div class="nav-replace" style="height: 63px; width: 100%"></div>
     <!-- {{ current | jsonify }} -->
     {% if current[0] != "" %}
         {% include wallpaper.html %}
@@ -17,5 +19,18 @@
     </main>
 
     {% include footer.html %}
+    <script defer>
+      const navbar = document.querySelector('#navbar');
+      const navbarHeight = navbar.getBoundingClientRect().height;
+      document.addEventListener('scroll', () => {
+
+          if (window.scrollY > navbarHeight) {
+              navbar.classList.add('navbar-float')
+          } else {
+              navbar.classList.remove('navbar-float')
+          }
+      });
+
+    </script>
   </body>
 </html>

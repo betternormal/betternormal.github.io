@@ -15,7 +15,12 @@ main,
 .nav {
   box-shadow: 0 2px 2px -2px $shadow-color;
   overflow: auto;
-
+  height: 63px;
+  position: fixed;
+  width: 100%;
+  background-color: #fafbfc;
+  padding: 0px;
+  transition: all 300ms ease-in-out;
   &-container {
     margin: 1rem auto;
     position: relative;
@@ -48,7 +53,9 @@ main,
     display: inline-block;
     opacity: .6;
     padding: 0 2rem 0 0;
-
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     &:last-child {
       padding-right: 0;
     }
@@ -63,6 +70,13 @@ main,
     color: $default-color;
     font-family: $sans-serif;
   }
+}
+
+.navbar-float {
+  // position: fixed;
+  // padding: 3px;
+  // width: 100%;
+  
 }
 
 @media (min-width: 600px) {
