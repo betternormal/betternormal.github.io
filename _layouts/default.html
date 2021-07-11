@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <style>
+      .progressContainer {
+            left:0;
+            height: 2px;
+            width: 100%;
+            margin-bottom: 0px;
+            /* position: fixed; */
+            /* bottom: 0px; */
+            /* top: 0px; */
+            overflow: hidden;
+            background-color: #fafbfc;
+            content: "";
+            display: table;
+            table-layout: fixed;
 
+        }
+
+        .progressBar {
+            width: 0%;
+            float: left;
+            height: 100%;
+            z-index:99;
+            max-width: 100%;
+            background-color:#2188ff;
+            -webkit-transition: width .6s ease;
+            -o-transition: width .6s ease;
+            transition: width .6s ease;
+            transition: opacity .4s linear .4s;
+        }
+    </style>
+  </head>
   {% include head.html %}
 
   <body>
     {% assign current = page.url | downcase | split: '/' %}
     {% include navigation.html %}
 
-    <div class="nav-replace" style="height: 63px; width: 100%"></div>
+    <!-- 바닥에 깔린 navbar -->
+    <nav id="navbar" class="nav">
+      <div class="nav-container">
+        <a href="{{ site.baseurl }}/">
+          <h2 class="nav-title">{{ site.title }}</h2>
+        </a>
+        <ul>
+          <li><a href="{{ site.baseurl }}/">Posts</a></li>
+          <li><a href="{{ '/tags' | prepend: site.baseurl }}">Tags</a></li>
+          <!-- <li><a href="{{ '/projects' | prepend: site.baseurl }}">Projects</a></li> -->
+          <!-- <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li> -->
+        </ul>
+      </div>
+    </nav>
+
+
+    
+    <!--<div class="nav-replace" style="height: 66px; width: 100%"></div> -->
     <!-- {{ current | jsonify }} -->
     {% if current[0] != "" %}
         {% include wallpaper.html %}
@@ -22,6 +70,7 @@
     <script defer>
       const navbar = document.querySelector('#navbar');
       const navbarHeight = navbar.getBoundingClientRect().height;
+      const scrollBar = document.querySelector('.progressContainer');
       document.addEventListener('scroll', () => {
 
           if (window.scrollY > navbarHeight) {
@@ -29,8 +78,27 @@
           } else {
               navbar.classList.remove('navbar-float')
           }
+
+          if(window.scrollY === 0) {
+            scrollBar.style.display = 'none';
+          } else {
+            scrollBar.style.display = 'block';
+          }
       });
 
+
+      window.addEventListener('load', function() {
+            window.addEventListener('scroll', function() {
+                // horizontal progress bar
+                const wintop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+                const docheight = document.querySelector('body').clientHeight;
+                const winheight = window.innerHeight || window.screen.height;
+                const totalScroll = (wintop/(docheight-winheight))*100;
+                document.querySelector('.progressBar').style.width = totalScroll+"%"
+            })         
+
+
+        })
     </script>
   </body>
 </html>

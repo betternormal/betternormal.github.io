@@ -15,8 +15,8 @@ main,
 .nav {
   box-shadow: 0 2px 2px -2px $shadow-color;
   overflow: auto;
-  height: 63px;
-  position: fixed;
+  //height: 66px;
+  //position: fixed;
   width: 100%;
   background-color: #fafbfc;
   padding: 0px;
@@ -70,6 +70,13 @@ main,
     color: $default-color;
     font-family: $sans-serif;
   }
+
+  
+}
+
+.nav.fixed {
+  position: fixed;
+  z-index: 2;
 }
 
 .navbar-float {
