@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "selection sort"
+title: "Selection sort"
 author: "praconfi"
 tags: algorithm
 ---
