@@ -130,7 +130,20 @@ html코드가 길어지면 가독성을 위해 줄바꿈을 할 수 있다. 줄�
     <!-- Recommended -->
     <a class="maia-button maia-button-secondary">Sign in</a>
     ```
+
+11. **HTML Validity**  
+HTML이 유효하게 잘 작성되었는지 [체크해주는 툴](http://validator.kldp.org/)을 이용해서 문제되는 부분을 수정한다.
+
     
+    ![문제가 있는 경우 위와같이 error와 warning을 알려준다](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0558eff6-b2f7-4c4d-89b6-e23948759ddb/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20211110%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211110T005456Z&X-Amz-Expires=86400&X-Amz-Signature=7ba9081c3ee9f94b77e2269297aa9feb82fdb05320ea84ee4c869bcccf62b09f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+    
+    문제가 있는 경우 위와같이 error와 warning을 알려준다
+    
+    ![하단에는 문제되는 상세내용을 알려준다. 오래된 방식의 문법도 에러로 표시해 최신문법을 적용하도록 도와준다. ](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7519d90d-1ae7-4b8d-afdd-a2bb7be595a2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20211110%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211110T005514Z&X-Amz-Expires=86400&X-Amz-Signature=c6e3b61d0d18e0b1f3a16f430beaf952ffaacbfcaa27d083d672a0a20145f409&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+    
+    하단에는 문제되는 상세내용을 알려준다. 오래된 방식의 문법도 에러로 표시해 최신문법을 적용하도록 도와준다. 
+    
+    자주나오는 오류내용은 [여기](https://blog.naver.com/rebehayan/221913804146)에서 확인해볼 수 있다.
 
 **참고**
 
