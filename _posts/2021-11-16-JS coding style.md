@@ -254,3 +254,7 @@ string에서 간편하게 자바스크립트 변수값을 넣을 때 사용된�
 추가할 예정  
 참고영상: [https://youtu.be/YK-GurROGIg](https://youtu.be/YK-GurROGIg)  
 참고글: [JS doc](https://velog.io/@yijaee/JSDoc%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%B4-JavaScript-%ED%8C%8C%EC%9D%BC-%EB%AC%B8%EC%84%9C%ED%99%94%ED%95%98%EA%B8%B0)
+
+**참고**
+
+- [구글 스타일가이드](https://google.github.io/styleguide/jsguide.html)
