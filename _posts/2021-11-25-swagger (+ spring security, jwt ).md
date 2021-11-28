@@ -2,7 +2,7 @@
 layout: post
 title: "swagger (+ spring security, jwt )"
 author: "praconfi"
-tags: web spring
+tags: spring
 ---
 
 # swagger (+ spring security, jwt )
