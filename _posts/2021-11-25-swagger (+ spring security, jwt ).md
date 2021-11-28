@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "swagger"
+title: "swagger (+ spring security, jwt )"
 author: "praconfi"
 tags: web spring
 ---
