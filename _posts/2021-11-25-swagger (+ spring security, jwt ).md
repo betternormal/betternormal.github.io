@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "swagger"
+title: "swagger (+ spring security, jwt )"
 author: "praconfi"
-tags: web spring
+tags: spring
 ---
 
 # swagger (+ spring security, jwt )
