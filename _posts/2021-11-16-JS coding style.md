@@ -68,17 +68,20 @@ UTF-8로 설정한다
     
 7. **변수선언은 한줄에 하나씩 한다**
     
-    ```jsx
+    ```js
     // Not Recommended
     let a = 1, b = 2;
     ```
     
-    ```jsx
+    ```js
     // Recommended
     let a = 1;
     let b = 2;
     ```
-    
+8. DOM요소를 변수로 할당할 경우 변수명 앞어 $를 표기한다  
+    ```js
+    const $operator = document.getElementById('operator');
+    ```
 8. **동치연산자**  
 일치하는경우 ===, 아닌경우 !==를 사용한다  
 ==와 !=를 사용하는 경우 연산되기 전에 비교할 수 있는 상태로 변환하기 때문에 기대와 다른 결과를 보게 될 수 있다
