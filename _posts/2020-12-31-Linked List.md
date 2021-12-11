@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "praconfi"
-tags: DataStructure CS
+tags: DataStructure
 title: "Linked List"
 ---
 ![Linked List](https://user-images.githubusercontent.com/64571546/103385080-56b8ba80-4b3c-11eb-9966-c929d23fb98f.png)

@@ -2,7 +2,7 @@
 layout: post
 title: "Bubble sort"
 author: "praconfi"
-tags: algorithm
+tags: Algorithm
 ---
 
 # 버블정렬

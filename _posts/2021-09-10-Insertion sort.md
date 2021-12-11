@@ -2,7 +2,7 @@
 layout: post
 title: "Insertion sort"
 author: "praconfi"
-tags: algorithm
+tags: Algorithm
 ---
 
 # 삽입정렬

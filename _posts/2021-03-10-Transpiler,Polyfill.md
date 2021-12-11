@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "praconfi"
-tags: web Javascript
+tags: Javascript
 title: "Transpiler, Pollyfill"
 ---
 

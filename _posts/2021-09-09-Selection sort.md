@@ -2,7 +2,7 @@
 layout: post
 title: "Selection sort"
 author: "praconfi"
-tags: algorithm
+tags: Algorithm
 ---
 
 # 선택정렬

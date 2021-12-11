@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "praconfi"
-tags: tips
+tags: Tips
 title: "Google search tips"
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cookies vs. Session vs. Localstorage vs. Sessionstorage"
+title: "Cookies | Session"
 author: "praconfi"
 tags: web
 ---
