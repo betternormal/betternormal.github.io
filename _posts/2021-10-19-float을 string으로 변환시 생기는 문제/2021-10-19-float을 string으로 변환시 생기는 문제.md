@@ -2,7 +2,7 @@
 layout: post
 title: "float을 string으로 변환시 생기는 문제"
 author: "praconfi"
-tags: SQL
+tags: MSSQL
 ---
 ![캡쳐](./1.png)
 ![캡쳐2](./2.png)
