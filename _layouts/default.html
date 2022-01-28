@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <link rel="manifest" href="../manifest.json" />
     <style>
       .progressContainer {
             left:0;
@@ -32,6 +33,11 @@
             /* transition: opacity .4s linear .4s; */
         }
     </style>
+    <script type="module">
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+      const el = document.createElement('pwa-update');
+      document.body.appendChild(el);
+    </script>
   </head>
   {% include head.html %}
 

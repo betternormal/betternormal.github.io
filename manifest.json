@@ -1,0 +1,28 @@
+{
+  "background_color": "#ffffff",
+  "description": "Practice and be confident.",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Praconfi",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Praconfi",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/assets/circle-16.ico",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/assets/circle-32.ico",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ]
+}
