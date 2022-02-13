@@ -4,6 +4,8 @@ author: "praconfi"
 tags: DataStructure
 title: "Hash table"
 ---
+
+
 # summary
 해시테이블은 key와 value가 한 쌍으로 구성된 데이터를 저장한다.  
 선형탐색은 데이터량에 비례해서 계산사간이 늘어나게 되는데, 이 문제를 해결해 주는것이 해시테이블이다.  
@@ -154,6 +156,11 @@ class HashTable {
 }
 module.exports = HashTable;
 ```
+- Javascript에서는 {} object가 해시테이블로 pre-built되어있다(python 에서는 dictionary)  
+- {}는 key로 string만 할당가능
+- Map()은 key로 어떤것이든(obj, array, function)할당 가능하고, 삽입순서대로 정렬되어있다
+- Set()은 중복을 허용하지 않는 Javascript의 해시테이블이다
+
 참고 :
 - 자바스크립트의 배열은 크기가 제한되어 있지 않은 동적 배열입니다.
 배열의 크기를 제한시키기 위해 기본 배열 대신 `part-2/src/helpers/limitedArray`를 사용
