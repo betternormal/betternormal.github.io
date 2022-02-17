@@ -17,6 +17,9 @@ title: "Flutter framework"
 - Hot Reload : 앱의 State는 유지하되 Widget Tree만 재구성하고 main() 및 initState()는 다시 호출되지 않는다.
 - Hot Restart : 앱을 새로 시작하며 기존의 State를 잃게 된다.
 
+## StatelessWidget와 StatefulWidget
+- SLW은 단한번만 build()를 하고, SFW은 상태가 변경될 때마다 build()를 하기 때문에, 상태값이 필요하지 않은 위젯은 SLW으로 만드는게 성능상 유리하다
+
 ## List를 그리는 방식들
 
 - Column + SingleChildScrollView  
@@ -28,3 +31,4 @@ title: "Flutter framework"
 화면에 보여지는 부분만 `lazy`하게 생성한다
 - ListView.separted  
 ListView.builder의 아이템사이에 `구분선`을 추가할 때 사용된다
+
