@@ -7,6 +7,9 @@ title: "Flutter framework"
 
 # Flutter framework
 
+## pubspec.yaml
+- pub패키지들은 종속성을 지정하기 위한 메타데이터가 필요하다. 사용자가 해당 메타정보를 확인할 수 있도록 pubspec파일에 작성한다
+
 ## main()와 runApp()
 
 - main함수는 java와 비슷하게 `프로그램의 시작점`이다
