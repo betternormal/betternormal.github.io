@@ -5,10 +5,27 @@ tags: Flutter
 title: "Flutter framework"
 ---
 
-# Flutter framework
+## Architecture
+Flutter 아키텍처는 세가지 주요 계층으로 구성된다.
+![archdiagram](../assets/imgs/archdiagram.png)
+### 1. Framework layer
+- 프레임워크 레이어는 다트로 작성된다  
+- UI테마, 위젯, 레이아웃, 애니메이션, 제스쳐 등 기본 구성요소가 포함된다  
+- JSON직렬화, 위치정보, 카메라 접근, 인앱결제 등 플러그인이 포함된다
+### 2. Engine layer
+- 핵심 C++라이브러리가 포함  
+- 엔진은 I/O, 그래픽, 텍스트 레이아웃, 접근성, 플러그인 아키텍처, Dart런타임과 같은 Flutter API의 저수준 기본 요소를 구현  
+- 화면에서 빠른 렌더링을 위해 Flutter 장면을 래스터화 하는 역할  
+### 3. Embedder layer
+- 네이티브 앱으로 통하는 진입점을 제공  
+- 네이티브 서비스에 대한 접근을 위해 기본 운영체제와 커뮤니케이션(iOS shell과 Android shell을 Embedder API를 통해 통신함)  
+## Skia 엔진
+Skia는 Android, iOS, Chrome, Windows, Mac, Ubuntu 등 다양한 환경에서 공통 API로 화면을 그릴 수 있도록 도와주는 오픈소스 2D 그래픽 라이브러리이다. Flutter는 Skia엔진을 내장하고 있다. Flutter는 각 디바이스들의 네이티브 컴포넌트를 사용하지 않고, Skia를 통해 렌더링 하기 때문에  디바이스에 제한 없이 동일한 화면으로 렌더링이 가능하다. 
 
 ## pubspec.yaml
 - pub패키지들은 종속성을 지정하기 위한 메타데이터가 필요하다. 사용자가 해당 메타정보를 확인할 수 있도록 pubspec파일에 작성한다
+
+
 
 ## main()와 runApp()
 
@@ -37,5 +54,5 @@ Column은 기본적으로 표시될 위젯의 크기만큼 가로길이를 갖�
 ListView.builder의 아이템사이에 `구분선`을 추가할 때 사용된다
 
 ## SizedBox와 Container
-- Container는 기본적으로 가능한한 최대한의 크기를 갖으려 한다.  
+- Container는 기본적으로 가능한한 최대한의 크기를 갖으려 한다(child가 생기면 child 크기로 줄어듬)  
 - SizedBox는 위젯을 특정크기로 설정하고싶을때, 위젯간 거리를 둘 때 사용된다
