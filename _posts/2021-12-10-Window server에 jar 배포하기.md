@@ -2,7 +2,7 @@
 layout: post
 title: "Window server에 jar 배포하기"
 author: "praconfi"
-tags: Spring OS
+tags: Spring windows
 ---
 
 # Window server에 jar 배포하기
