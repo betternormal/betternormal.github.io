@@ -5,13 +5,19 @@ tags: DataStructure
 title: "Binary Search Tree"
 ---
 # summary
-이진탐색트리는 두가지 성질을 가지고 있다.  
+### 이진탐색트리는 두가지 성질을 가지고 있다.  
 1. 모든 노드는 왼쪽가지에 포함되는 어떤 숫자보다도 큰 숫자가 된다.  
-2. 모든 노드느느 그 노드의 오른쪽 가지에 포함되는 어떤 숫자보다 작은 숫자가 된다.  
+2. 모든 노드는 그 노드의 오른쪽 가지에 포함되는 어떤 숫자보다 작은 숫자가 된다.  
 ### 이 두개의 성질로부터 다음 조건이 성립된다.
 - 이진 탐색트리의 `최소노드`는 최상단에 있는 노드로부터 `왼쪽` 가지만 따라가면 나오는 가장끝에 있는 노드가 된다.  
 - `최대노드`는 최상단의 노드로부터 `오른쪽` 가지만 계속 따라가면 가장 끝에 있는 노드가 된다.  
 이진탐색트리를 사용하면 효율적인 탐색이 가능하지만, 트리가 직선에 가까운 형태가 되면 선형탐색과 마찬가지로 탐색효율이 나빠진다.
+
+### Big O
+
+- balanced binary search tree: `O(log(n))`  
+- unbalanced binary search tree `O(n)`  
+    최악의 경우 연결리스트와 같은 구조가 된다
 
 
 # Binary Search Tree
@@ -55,17 +61,17 @@ title: "Binary Search Tree"
 ![Untitled (6)](https://user-images.githubusercontent.com/64571546/104246006-95d5fc80-54a8-11eb-8aff-3795799a8a7a.png)
 sibling을 먼저 탐색하고, 그 후 다음 depth로 들어가 해당 depth의 sibling을 탐색하는 방식으로 전체 트리를 순회한다.
 
-### 다양한 이진 탐색 트리
 
-- 탐색방법
-    - 전위 순회(Preorder Traversal): 부모 → 좌 → 우
-    - 중위 순회(Inorder Traversal): 좌 → 부모 → 우
-    - 후위 순회(Postorder Traversal): 좌 → 우 → 부모
-- 종류
-    - 정 이진 트리(Full Binary Tree)
-    - 완전 이진 트리(Complete Binary Tree)
-    - 포화 이진 트리(Perfect Binary Tree)
+### 종류
+- 정 이진 트리(Full Binary Tree)  
+- 완전 이진 트리(Complete Binary Tree)  
+- 포화 이진 트리(Perfect Binary Tree)  
+- 
 
+### 탐색방법
+- 전위 순회(Preorder Traversal): 부모 → 좌 → 우  
+- 중위 순회(Inorder Traversal): 좌 → 부모 → 우  
+- 후위 순회(Postorder Traversal): 좌 → 우 → 부모  
    
 
 ## Methods
