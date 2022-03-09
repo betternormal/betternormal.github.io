@@ -17,7 +17,8 @@ title: "Hash table"
 |Access| Search|Insert|Delete|   
 |:---: | :---: | :---: | :---: |   
 | N/A|O(1)|O(1)|O(1)|  
-- 단점은 데이터들이 정렬되어 있지 않다는 점이다(python의 hash table인 dictionary는 정렬도 된다고 한다)  
+
+> 단점은 데이터들이 정렬되어 있지 않다는 점이다(python의 hash table인 dictionary는 정렬도 된다고 한다)  
 
 # Hash Table
 해시테이블은 해시함수와 함께 데이터 검색을 효율적으로 하기 위해 사용되는 자료구조이다.  
