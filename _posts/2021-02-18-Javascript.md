@@ -95,32 +95,4 @@ HTML과 CSS로 정적인 페이지를 만들고 그위에 상호작용하는 요
 
 출처 : [https://ko.javascript.info/intro](https://ko.javascript.info/intro)
 
-## for문과 while문의 차이점
-
-> #### for문과 while문은 같은 반복문이지만 사용용도에 차이점이 있다.
-> for문을 사용하는 경우
-> 
-> 반복횟수가 정해진 경우,
-주로 배열과 함께 많이 사용
-
-```js
-let sum=0;
-for(let i=0; i<10; i++){
-  sum +=i;
-}
-console.log(sum);
-```
-> #### while문을 사용하는 경우
-> 
->무한루프나 특정 조건에 만족할 때까지 반복해야 하는 경우,
-주로 **파일 읽고 쓰기**에 많이 사용
-```js
-let sum=0;
-i=1;
-while(i<=10){
-  sum +=i;
-  i++
-}
-console.log(sum);
-```
 
