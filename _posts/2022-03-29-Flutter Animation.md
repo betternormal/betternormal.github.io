@@ -29,8 +29,9 @@ STF위젯에 Ticker관련 클래스를 mixin 하고 사용한다
 - controller는 기본적으로 0-1의 값을 가지며, 전체 소요시간은 `duration` 값으로 정의한다  
 - Tween class를 사용하는 경우 `begin`과 `end` 속성을 이용해 시작과 끝값을 정의할 수 있다  
 - 완료되는 경우 관련된 상태값이 리턴되며, `addStatusListener()` 를 이용해 감지할 수 있다  
-## Example
-```jsx
+## Example  
+
+```dart
 // 컨트롤러 변수 선언
 AnimationController controller;
 // Curved class를 사용하기 위해 animation 선언
