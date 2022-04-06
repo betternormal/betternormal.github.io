@@ -5,6 +5,12 @@ tags: Flutter
 title: "Flutter framework"
 ---
 
+## how to make flutter project
+```
+// CLI
+(fvm) flutter create PROJECT_NAME
+```
+
 ## Architecture
 Flutter 아키텍처는 세가지 주요 계층으로 구성된다.
 ![archdiagram](../assets/imgs/archdiagram.png)
