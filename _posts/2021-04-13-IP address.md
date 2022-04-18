@@ -2,7 +2,7 @@
 layout: post
 author: "praconfi"
 tags: Network
-title: "IPv4"
+title: "IP address"
 ---
 
 - 4개의 필드로 구성되어 있고, `.`으로 구분된다.  
