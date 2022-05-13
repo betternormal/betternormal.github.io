@@ -33,7 +33,8 @@ STF위젯에 Ticker관련 클래스를 mixin 하고 사용한다
 
 ```dart
 // 컨트롤러 변수 선언
-AnimationController controller;
+AnimationController controller;  
+
 // Curved class를 사용하기 위해 animation 선언
 Animation animation;
 @override
@@ -45,6 +46,8 @@ void initState() {
 		vsync: this,
 		upperBound: 100 // 기본값은 0-1이지만 upperBound속성을 이용해 최대값을 수정할 수 있다, Curved class를 사용하는 경우 없애야함
 	)
+	
+	// 좀더 동적인 애니메이션을 표현하기 위해 Curved class를 사용한다
 	animation = CurvedAnimation(parent: controller curve: Curves.decelerate)
 	controller.forward(); // 증가
 	controller.reverse(from: 1.0); // 감소, from속성을 통해 시작값 설정 가능
@@ -62,13 +65,25 @@ void initState() {
 			controller.forward();
 		}
 	})
-	// 컨트롤러는 0에서 1까지 증가한다
-	// 이 증가값을 이용해 투명도 조정 가능 
-	backgroundColor: Colors.red.withOpacity(controller.value)
-	이때 증가값에 따라 화면을 변화시키기 위해 addListener 콜백함수 내에 setState를 호출해야 한다
-	controller.value.toInt()를 통해 1에서 100까지 증가되는 로딩 프로그레스?를 표현할 수도 있다
 
-	좀더 동적인 애니메이션을 표현하기 위해 Curved class를 사용한다
+	// repeat 메소드를 통해 무한반복할 수 있다.
+	// reverse 속성을 이용해 0~1~0~1 과같이 이어지는 값을 얻을 수 있다 
+	AnimationController(duration: const Duration(seconds: 1), vsync: this)
+          ..repeat(max: 1, reverse: true);
+
+
+	// 컨트롤러값을 이용해 투명도 조정 가능 
+	backgroundColor: Colors.red.withOpacity(controller.value)
+
+	// 컨트롤러 값에 따라 화면을 변화시키기 위해 addListener 콜백함수 내에 setState를 호출해야 한다
+	// addListener는 ..를 이용해 컨트롤러 생성과 함께 실행 시킬수 있다  
+	..addListener(() {
+            setState(() => {});
+          });
+
+	
+	controller.value.toInt() // 를 통해 1에서 100까지 1씩 증가되는 로딩 프로그레스바를 표현할 수도 있다
+
 	// 위젯이 종료될 때 컨트롤러를 해제해줘야 메모리에서 해제된다
 	@override
 	void dispose() {

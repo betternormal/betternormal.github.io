@@ -59,8 +59,22 @@ z = float(z)
 # String
 
 ```python
+# 작은따옴표와 큰따옴표를 이용해 문자열을 만들 수 있다.
+name = 'ben'
+
+# escape code를 이용해 문자열의 따옴표를 표현한다
+sentence = 'he\'s favorite language is python'
+
 # 출력은 F-String을 사용한다
 print(f'hello, my name is {name} and I am {age}')
+
+# String Index
+a = 'abced'
+a[0] # a
+a[-2] # e
+a[:3] # abc
+a[1:4] # bcd
+a[3:] # ed
 
 # Method
 # 1. capitalize
@@ -105,6 +119,11 @@ print(s.isalpha())
 
 # 14. is all numeric
 print(s.isnumeric())
+
+# 15. trim
+print(s.lstrip()) # left
+print(s.rstrip()) # right
+print(s.strip())  # all
 ```
 
 # List
@@ -132,6 +151,7 @@ fruits[0] = 'Blueberries'
 
 # Remove
 fruits.remove('Grapes')
+del fruits[1]
 
 # Remove with pop
 fruits.pop(2)
@@ -145,11 +165,26 @@ fruits.sort()
 # Reverse Sort
 fruits.sort(reverse = True)
 
+# Slice
+fruits[:3]
+fruits[3:]
+fruits[1:3]
+
+# Copy
+
+fruits2 = fruits 			# shallow
+id(fruits2) == id(fruits)   # True
+
+fruits3 = copy(fruits)  	# deep
+id(fruits3) == id(fruits)   # False
+
+
 ```
 
 # Tuple
+Tuple is a collection which is ordered and `unchageable` Allows duplicate members.  
+If you do not want to change the value all the time while the program is running. use a tuple.
 
-Tuple is a collection which is ordered and `unchageable` Allows duplicate members.
 
 ```python
 fruits = ('Apples', 'Oranges', 'Grapes')
@@ -193,6 +228,15 @@ fruits_set.clear()
 
 # Delete
 del fruits_set
+
+# Intersection
+s1.intersection(s2)
+
+# Union
+s1.union(s2)
+
+# Difference
+s1.difference(s2)
 ```
 
 # Dictionary
@@ -218,7 +262,12 @@ print(len(person))
 person['phone'] = '010-1234-1234'
 
 # Get keys
-print(person.keys())
+print(person.keys())       # dict_keys(for memory saving)   
+print(list(person.keys())) # list 
+
+# Get values
+print(person.values())       # dict_values(for memory saving)   
+print(list(person.values())) # list 
 
 # Get items
 print(person.items())
@@ -234,13 +283,26 @@ person.pop('phone')
 # Clear
 person.clear()
 
+# Check key exist
+'age' in person   # True
+'city' in person  # False
+
 ```
 
 # Function
 
 don’t use curly brackets, use indentation with tabs or spaces
 
+
 ```python
+# parameter vs. arguments
+
+def add(a, b):  	# parameter
+	return a + b
+
+add(3, 4) 			# arguments
+
+
 def sayHello(name):
 	print(f'Hello {name}')
 
@@ -249,6 +311,22 @@ sayHello('Ben')
 def getSum(num1, num2):
 	total = num1 + num2
 	return total
+
+# multiple arguments
+def add_many(option ,*args):
+	result = 0
+	if option == 'add':
+		for i in args:
+			result += i
+		return result
+
+add_many('add', 1, 2, 3, 4, 5)
+
+# keyword parameter
+def print_kwargs(**kwargs):
+	print(kwargs)
+
+print_kwargs(a=1)  # became dict {'a': 1}
 
 # lamda function is similar to JS arrow function
 getSum2 = lamda num1, num2: num1 + num2
