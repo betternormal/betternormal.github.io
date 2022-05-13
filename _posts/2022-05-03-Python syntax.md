@@ -255,6 +255,88 @@ getSum2 = lamda num1, num2: num1 + num2
 
 ```
 
+# Python Built-in Function
+```python
+# 절댓값
+abs(-3) # 3
+
+# 모두참이면 True, 하나라도 거짓이면 False
+all([1, 2, 3]) # True
+all([1, 2, 0]) # False
+
+# 하나라도 참이면 True
+any([1, 0, ""]) # True
+any([0, ""])    # False
+
+# ASCII 코드에서 문자 return
+chr(97) # 'a'
+
+# 순서가 있는 자료형(list, tuple, string)을 enumerate객체(index값이 있음)로 돌려준다
+for i, name in enumerate(['body', 'foo', 'bar']):
+	print(i, name)
+
+# filter
+list(filter(lambda x: x > 0, [1, -3, 2, 0, -5, 6]))
+
+# 정수값을 16진수로 반환
+hex(234) # '0xea' 
+
+# 객체의 고유 주소값 반환
+id(a)
+
+# 사용자 입력 받기
+a = input("Enter: ") # if enter 'hi'
+print(a) # 'hi'
+
+# 실수, 이진수, 16진수를 정수로 반환
+int('3')      # 3
+int(3.5)      # 3
+int('11', 2)  # 3
+int('1A', 16) # 26
+
+# 길이 반환
+len('python') # 6
+
+# 반복가능한 자료형을 list로 반환
+list('python') # ['p', 'y', 't', 'h', 'o', 'n']
+list((1, 2, 3)) # [1, 2, 3]
+
+# 리스트 전체에 특정함수 적용
+list(map(lambda a: a*2), [1, 2, 3, 4]) # [2, 4, 6, 8]
+
+# 최대값 반환
+max([1, 2, 3]) # 1
+max('python')  # 'h'
+
+# n제곱값
+pow(2, 2) # 4
+
+# 범위의 리스트 생성
+range(3)        # [0, 1, 2]
+range(2, 3)     # [2]
+range(1, 10, 2) # [1, 3, 5, 7, 9]
+
+# 반올림
+round(5.6)  # 6
+
+# 정렬 후 리스트 반환(리스트의 정렬메소드는 해당 리스트를 정렬하고, 반환하지 않음)
+sorted([3, 1, 2]) # [1, 2, 3]
+
+# 문자열 변환
+str(3) # '3'
+
+# 요소들의 합 반환
+sum([1, 2, 3]) # 6
+
+# iterable을 튜플로 반환
+tuple("abc")      # ("a", "b", "c")
+tuple([1, 2, 3])  # (1, 2, 3)
+
+# 자료형 체크
+type("abc") # <class 'str'>
+
+```
+
 # Contidions
 
 ```python
@@ -366,6 +448,7 @@ janet.greeting()
 ```
 
 # Module
+every python code with `.py` are modules
 
 ```python
 # pip(package installer for Python) is python's package manager
@@ -378,6 +461,24 @@ today = datetime.date.today()
 from datetime import date
 today = date.today()
 ```
+
+ ## \_\_name\_\_ variable
+ ```python
+# mod1.py
+def add(a, b):
+	return a+b
+
+if __name__ == "__main__":
+	print(add(1, 2))
+
+ # when run mod1.py
+ __name__ == __main__    # True
+
+ # when import mod1.py
+__name__ == MODULE_NAME  # True
+
+ ```
+
 
 # Files
 
@@ -406,6 +507,43 @@ myFile.close()
 myFile = open('myfile.txt', 'r+')
 text = myFile.read(100) # 100 characters
 print(text)
+
+# readline(), single line
+f = open("C:/text.txt", 'r')
+line = f.readline()
+print(line)
+f.close()
+
+while True:
+	line = f.readline()
+	if not line: break
+	print(line)
+f.close()
+
+## readlines(), multi lines as list
+f = open("C:/text.txt", 'r')
+lines = f.readlines()
+for line in lines:
+	print(line)
+f.close()
+
+```
+
+# Exception handling
+```python
+try:
+
+except:
+
+except ZeroDivisionError as e:
+	print(e)
+except FileNotFoundError:
+	pass  # pass exception
+finally:
+	f.close()
+
+# make exception
+raise NotImplementedError
 ```
 
 # JSON
