@@ -7,7 +7,7 @@ title: "NAT, Port forwarding"
 
 # NAT(Network Address Translation)
 
-특정 `ip주소`의 특정 `port`로 가는 패킷을 다른 `ip주소`의 다른 `port`로 바꿔주는 것이다. 패킷에 변화가 생기기 때문에 IP나 UDP|TCP의 checksum도 다시 계산되어 재기록 한다
+특정 `ip주소`의 특정 `port`로 가는 패킷을 다른 `ip주소`의 다른 `port`로 바꿔주는 것이다. 패킷에 변화가 생기기 때문에 IP나 UDP\|TCP의 checksum도 다시 계산되어 재기록 한다
 
 NAT를 이용하는 이유는 대개 사설 네트워크에 속한 여러개의 호스트가 하나의 공인IP를 사용해 인터넷에 접속하기 위함이다
 
