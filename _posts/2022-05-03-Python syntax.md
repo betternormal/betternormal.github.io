@@ -119,6 +119,7 @@ print(s.isalpha())
 
 # 14. is all numeric
 print(s.isnumeric())
+print(s.isdigit())
 
 # 15. trim
 print(s.lstrip()) # left
@@ -162,8 +163,14 @@ fruits.reverse()
 # Sort
 fruits.sort()
 
+# Sort with key
+fruits.sort(key=lambda x: x[1])
+# Sort with tuple key(multi condition)
+fruits.sort(key=lambda x: (x[1:], x[0]))
+
 # Reverse Sort
 fruits.sort(reverse = True)
+
 
 # Slice
 fruits[:3]
