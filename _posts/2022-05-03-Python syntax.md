@@ -180,6 +180,14 @@ id(fruits3) == id(fruits)   # False
 
 
 ```
+# List comprehension
+- declaration and assignment of the array in `one line`  
+- [(변수를 활용한 값) for (변수) in (순회할수 있는 값)]  
+```python
+[i * 2 for i in range(0, 3)]  # [0, 2, 4]
+[i * 2 for i in range(0, 3) if i % 2 == 0]  # [0, 4]
+```
+
 
 # Tuple
 Tuple is a collection which is ordered and `unchageable` Allows duplicate members.  
@@ -289,6 +297,22 @@ person.clear()
 
 ```
 
+# defaultdict
+- collections.defaultdict()  
+- similar to dict, but has pre-specified initial value  
+```python
+counts = collections.defaultdict(int)
+counts['a'] = + 1  	# {'a': 1}
+```
+
+# Counter class
+- Useful classes for counting data, expanded dict(dict's methods are available)  
+- `most_common()`: returns an array sorted by the highest number of data  
+```python
+Counter('hello world')   # Counter({'l': 3, 'o': 2, 'h': 1, 'e': 1, ' ': 1, 'w': 1, 'r': 1, 'd': 1})
+
+Counter('hello world').most_common(1)   # [('l', 3)]
+```
 # Function
 
 don’t use curly brackets, use indentation with tabs or spaces
