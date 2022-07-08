@@ -384,6 +384,14 @@ chr(97) # 'a'
 for i, name in enumerate(['body', 'foo', 'bar']):
 	print(i, name)
 
+# enumerate의 두번째 인자값으로 index의 시작값을 지정할 수 있다
+for i, name in enumerate(['body', 'foo', 'bar'], 1):
+	print(i, name)
+
+(1, 'body')
+(2, 'foo')
+(3, 'bar')
+
 # filter
 list(filter(lambda x: x > 0, [1, -3, 2, 0, -5, 6]))
 
