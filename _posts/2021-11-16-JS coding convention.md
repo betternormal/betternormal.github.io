@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "JS coding style"
+title: "JS coding convention"
 author: "praconfi"
 tags: Javascript
 ---
 
-# JS coding style
+# JS coding convention
 
 1. **파일명**  
 파일명은 소문자로 작성하고 '-'나 '_'를 포함할 수 있다
