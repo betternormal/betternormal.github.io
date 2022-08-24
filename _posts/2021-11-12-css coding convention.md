@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "CSS coding style"
+title: "CSS coding convention"
 author: "praconfi"
 tags: CSS
 ---
 
-# CSS coding style
+# CSS coding convention
 
 1. **id와 class 네이밍**
 요소의 목적을 설명할수 있는 이름을 사용한다

@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "html coding style"
+title: "HTML coding convention"
 author: "praconfi"
 tags: HTML
 ---
 
-# HTML coding style
+# HTML coding convention
 
 1. **프로토콜**
 외부 리소스를 참조할 때 가능하면 https 프로토콜을 사용한다( http만 존재하는경우 예외 )
