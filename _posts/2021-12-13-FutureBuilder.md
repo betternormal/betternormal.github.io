@@ -1,6 +1,6 @@
 ---
 layout: post
-title: FutureBuilder"
+title: FutureBuilder
 author: "praconfi"
 tags: Flutter
 ---

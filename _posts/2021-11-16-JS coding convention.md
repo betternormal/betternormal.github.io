@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JS coding convention"
+title: "Javascript coding convention"
 author: "praconfi"
 tags: Javascript
 ---

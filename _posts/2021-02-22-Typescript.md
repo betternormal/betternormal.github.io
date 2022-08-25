@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "basic of typescript"
+title: "Typescript"
 author: "praconfi"
 tags: Typescript
 ---
