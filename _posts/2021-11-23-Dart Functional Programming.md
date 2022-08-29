@@ -83,7 +83,7 @@ Set blackPinkSet = {"로제",'지수','제니','리사'};
 final newSet = blackPinkSet.map((item) => 'this is $item').toSet();
 ```
 
-## where()
+# where()
 
 필터하는 목적
 
@@ -106,7 +106,7 @@ List<Map<String, String>> people = [
 final result = people.where((item) => item['group'] == 'BTS').toList();
 ```
 
-## reduce()
+# reduce()
 
 최초에만 prev와 next에 첫번째값 두번째값이 들어간다
 
@@ -127,7 +127,7 @@ int resultInt = numbers.reduce((prev, next) {
 numbers.reduce((prev, next) => prev + next);
 ```
 
-## fold()
+# fold()
 
 reduce()와 같은역할, 초기값을 정하면서 반환값의 데이터 타입을 정할 수 있다
 
@@ -146,7 +146,7 @@ words.fold<int>(0, (prev, next) => prev + next.length); // 5
 
 ```
 
-## …cascade operator
+# …cascade operator
 
 리스트를 합치는 경우
 
