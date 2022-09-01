@@ -366,6 +366,14 @@ getSum2 = lamda num1, num2: num1 + num2
 
 # Python Built-in Function
 ```python
+# print()
+print("1", "2", "3", end=' ')
+# '1 2 3  ' 
+print("1", "2", "3", sep='\n')
+# 1
+# 2
+# 3
+
 # 절댓값
 abs(-3) # 3
 
