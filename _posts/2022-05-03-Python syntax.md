@@ -160,8 +160,11 @@ fruits.pop(2)
 # Reverse
 fruits.reverse()
 
-# Sort
+# sort the list in-place
 fruits.sort()
+
+# return a new sorted list
+sorted(fruits)
 
 # Sort with key
 fruits.sort(key=lambda x: x[1])
