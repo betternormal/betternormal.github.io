@@ -5,7 +5,7 @@ tags: Flutter
 title: "flutter 버전변경 후 build오류"
 ---
 
-![buildError](./imgs/compileFlutterBuildDebug.png)
+![buildError](../assets/imgs/2022-09-21/compileFlutterBuildDebug.png)
 
 1. fvm으로 최신의 stable한 버전으로 변경
 
