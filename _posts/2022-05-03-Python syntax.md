@@ -696,6 +696,19 @@ carJson = json.dumps(car)
 print(carJson)
 ```
 
+# Reduce
+reduce(집계 함수, 순회 가능한 데이터[, 초기값])
+```python
+numbers = [1, 2, 3, 4, 5]
+total = reduce(lambda a, b: a + b, numbers)
+```
+# Type casting
+## list to set
+set(list)
+
+# calculate
+- divide는 int끼리 나누도, float을 반환
+
 ## Ref
 
 - [https://www.youtube.com/watch?v=JJmcL1N2KQs](https://www.youtube.com/watch?v=JJmcL1N2KQs)
