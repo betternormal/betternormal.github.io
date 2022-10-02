@@ -25,3 +25,13 @@ CustomScrollView(
 )
 ```
                 
+# 키보드에서 이동 버튼을 눌렀을때 특정 이벤트를 실행시키고 싶을 때
+- textInputAction을 TextInputAction.go로 설정
+- onSubmitted에 콜백함수 작성
+```dart
+TextField(
+    textInputAction: TextInputAction.go,
+    onSubmitted: (value) async {
+      // do something
+    }
+```
