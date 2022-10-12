@@ -160,8 +160,11 @@ fruits.pop(2)
 # Reverse
 fruits.reverse()
 
-# Sort
+# sort the list in-place
 fruits.sort()
+
+# return a new sorted list
+sorted(fruits)
 
 # Sort with key
 fruits.sort(key=lambda x: x[1])
@@ -692,6 +695,19 @@ car = {'make': 'Toyota', 'model': 'camry', 'year': 1}
 carJson = json.dumps(car)
 print(carJson)
 ```
+
+# Reduce
+reduce(집계 함수, 순회 가능한 데이터[, 초기값])
+```python
+numbers = [1, 2, 3, 4, 5]
+total = reduce(lambda a, b: a + b, numbers)
+```
+# Type casting
+## list to set
+set(list)
+
+# calculate
+- divide는 int끼리 나누도, float을 반환
 
 ## Ref
 
