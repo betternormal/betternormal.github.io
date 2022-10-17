@@ -185,6 +185,13 @@ fruits[1:3]
 fruits2 = fruits 			# shallow
 id(fruits2) == id(fruits)   # True
 
+arr = [0, 2]
+arr2 = arr					# shallow
+arr3 = arr[:] 				# deep
+
+print(id(arr) == id(arr2))  # True
+print(id(arr) == id(arr3))  # False
+
 fruits3 = copy(fruits)  	# deep
 id(fruits3) == id(fruits)   # False
 
@@ -486,6 +493,8 @@ if x > 2 or x <= 10:
 
 if not(x == y):
 	print(f'{x} is not equal to {y}') 
+
+if not arr 			# if arr == []
 
 # not, not in
 numbers = [1, 2, 3, 4, 5]
