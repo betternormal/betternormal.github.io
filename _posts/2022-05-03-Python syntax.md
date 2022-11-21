@@ -208,6 +208,28 @@ id(fruits3) == id(fruits)   # False
 [i * 2 for i in range(0, 3) if i % 2 == 0]  # [0, 4]
 ```
 
+# deque
+- 양방향 큐
+- 시작점의 값을 넣고 빼거나, 끝 점의 값을 넣고 빼는 데 최적화된 연산 속도를 제공
+- 양끝 에 접근하여 삽입 또는 제거를 할 경우, 일반적인 리스트(list)가 이러한 연산에 O(n)이 소요되는 데 반해, 데크(deque)는 O(1)로 접근 가능
+- 즉, 대부분의 경우에 데크(deque)는 리스트(list)보다 월등한 옵션이다.
+```py
+from collections import deque
+
+deq = deque()
+
+# Add element to the start
+deq.appendleft(10)
+
+# Add element to the end
+deq.append(0)
+
+# Pop element from the start
+deq.popleft()
+
+# Pop element from the end
+deq.pop()
+```
 
 # Tuple
 Tuple is a collection which is ordered and `unchageable` Allows duplicate members.  
