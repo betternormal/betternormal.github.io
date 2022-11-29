@@ -54,6 +54,12 @@ x, y, name, is_cool = (1, 2.5, 'Ben Kim', True)
 x = str(x)
 y = int(y)
 z = float(z)
+
+# Positive infinity number
+ptive_inf = float('inf')
+
+# Negative infinity number
+ntive_inf = float('-inf')
 ```
 
 # String
