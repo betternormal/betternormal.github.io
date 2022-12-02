@@ -11,6 +11,7 @@ title: "git commit 정리"
 # 1. 현재 브랜치에서 아래 명령어 입력
 ```
 $ git rebase -i master (또는 main)
+$ git rebase -i HEAD~3 (최근 3개의 커밋)
 ```
 
 # 2. 커밋 수정, 병합
@@ -37,7 +38,7 @@ pick을 reword로 변경한 후 :wq
 ```
 ## 3. 저장및 종료
 ```
-:eq
+:wq
 ```
 
 # 3. 원격브랜치 업데이트
