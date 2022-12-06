@@ -35,3 +35,19 @@ TextField(
       // do something
     }
 ```
+
+## Build이후 바로 실행시킬 함수 ex) 초기 데이터 fetch
+- Future.microtask
+- Future.delayed(Duration.zero, () =>...)
+
+위젯이 빌드되면 initState -> build 순으로 호출하게 되는데, build가 되기 전에는 setState가 호출이 되면 안 된다.
+fetchItems안에 notifyListeners는 build안에 setState와 같은 역할을 한다.
+고로, initState에서 처음 데이터를 가져오되, build 이후 실행이 되어야 하기 때문에 Future.microtask로 잠깐의 딜레이를 주고, build 이후 호출이 되게 한다.
+
+```dart
+@override
+initState() {
+  super.initState();
+  Future.microtask(() =>Provider.of<InfiniteProvider>(context, listen: false).fetchItems());
+}
+```
