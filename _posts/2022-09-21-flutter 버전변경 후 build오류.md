@@ -9,6 +9,19 @@ title: "flutter 버전변경 후 build오류"
 
 1. fvm으로 최신의 stable한 버전으로 변경
 
-2. pubspec.lock 제거
+2. gradle 버전확인
 
-3. pub get
+3. pubspec.lock 제거
+
+4. updated 된 패키지 업데이트
+   
+```
+flutter pub outdated
+flutter pub upgrade --major-versions
+```
+
+5. clean 후 패키지 재설치
+```
+flutter clean
+flutter pub get
+```
