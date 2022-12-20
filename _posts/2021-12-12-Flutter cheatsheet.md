@@ -5,6 +5,11 @@ author: "praconfi"
 tags: Flutter
 ---
 
+# 프로젝트 생성
+```dart
+flutter create my_app
+```
+
 # Textfield 입력중 화면 바깥을 터치해 키보드를 가리고 싶을때
 ```dart
 return GestureDetector(
