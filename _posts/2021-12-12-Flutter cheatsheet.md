@@ -56,3 +56,30 @@ initState() {
   Future.microtask(() =>Provider.of<InfiniteProvider>(context, listen: false).fetchItems());
 }
 ```
+
+## initstate에서 async를 사용해야 하는 경우
+initstate에서 async를 사용하는건 ui의 inconsistance를 야기시킬수 있기 때문에 해당 메소드 내부에서 기다리게 현재 프레임이 끝나고 호출될 수 있도록 `WidgetsBinding.instance!.addPostFrameCallback`를 사용한다
+```dart
+Widget build(BuildContext context) {
+  
+  final authState = context.watch<AuthProvider>().state;
+  // 빌드 내에서 네비게이션을 하기때문에 safe 한 operation을 위해 현제 빌드 이후 동작하도록 스케줄링
+  if (authState.authStatus == AuthStatus.authenticated) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      Navigator.pushReplacementNamed(context, MapScreen.routeName);
+    });
+  } else if (authState.authStatus == AuthStatus.unauthenticated) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      Navigator.pushReplacementNamed(context, SignInScreen.routeName);
+    });
+  }
+
+  <!-- ... -->
+}
+```
+
+## Datetime을 한국포맷(연, 월, 일)로 수정할 때
+```dart
+DateFormat('yyyy년 MM월 dd일').format(item.createdAt!),
+```
+
