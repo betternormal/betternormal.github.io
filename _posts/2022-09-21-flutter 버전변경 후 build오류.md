@@ -7,7 +7,11 @@ title: "flutter 버전변경 후 build오류"
 
 ![buildError](../assets/imgs/2022-09-21/compileFlutterBuildDebug.png)
 
+- flutter버전은 3개월이전이 안정적이고 좋다
+
+
 1. fvm으로 최신의 stable한 버전으로 변경
+   1. `fvm global 3.16.6` 명령어로 글로벌하게 변경가능하다
 
 2. gradle 버전확인
     - 해당 플러터 버전으로 새로운 프로젝트를 만든뒤, 사용된 gradle버전을 확인한다
