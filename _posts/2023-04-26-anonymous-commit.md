@@ -2,7 +2,7 @@
 layout: post
 author: "praconfi"
 tags: 'git'
-title: "Anonymous commit"
+title: "익명으로 커밋 남기기 - Anonymous commit"
 ---
 
 ```

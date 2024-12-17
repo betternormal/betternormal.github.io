@@ -2,7 +2,7 @@
 layout: post
 author: "praconfi"
 tags: git
-title: "git commit 정리"
+title: "커밋 개수, 내용 깔끔하게 정리(fixup, squash)"
 ---
 
 > git rebase기능을 이용해 커밋들의 순서를 변경할수 있고, 작은 커밋들을 병합, 수정할 수 있다  

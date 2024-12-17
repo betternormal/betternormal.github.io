@@ -2,7 +2,7 @@
 layout: post
 author: "praconfi"
 tags: git
-title: "git commit 가져오기"
+title: "필요한 커밋만 빼오기(cherry pick)"
 ---
 
 > git cherry-pick 기능을 이용해 다른 브랜치에서 원하는 커밋만 가져올 수 있다  

@@ -2,7 +2,7 @@
 layout: post
 author: "praconfi"
 tags: git
-title: "git mirror"
+title: "레포지토리 복제하기(git mirror)"
 ---
 
 > git mirror를 이용해 커밋기록을 포함해, 레포지토리를 옮긴다
