@@ -131,6 +131,10 @@ print(s.isdigit())
 print(s.lstrip()) # left
 print(s.rstrip()) # right
 print(s.strip())  # all
+
+# 10억의 지수표현방식
+a = 1e9
+print(a)
 ```
 
 # List
@@ -140,6 +144,11 @@ List is a collection which is ordered and chageable. allows duplicate members
 ```python
 numbers = [1, 2, 3, 4, 5]
 fruits = ['Apples', 'Oranges', 'Grapes', 'Pears']
+
+# 1차원 리스트 초기화
+n = 10
+a = [0] * n
+print(a)
 
 # Get
 print(fruits[0])
@@ -210,8 +219,14 @@ id(fruits3) == id(fruits)   # False
 - declaration and assignment of the array in `one line`  
 - [(변수를 활용한 값) for (변수) in (순회할수 있는 값)]  
 ```python
-[i * 2 for i in range(0, 3)]  # [0, 2, 4]
+[i for i in range(3)]  # [0, 1, 2]
 [i * 2 for i in range(0, 3) if i % 2 == 0]  # [0, 4]
+array = [i for i in range(20) if i % 2 == 1]
+print(array)
+print([i ** 2 for i in range(20) if i % 2 == 0])
+n, m = 2, 3
+d2_arr = [[0] * m for _ in range(n)]
+print(d2_arr)
 ```
 
 # deque
@@ -293,6 +308,17 @@ s1.union(s2)
 
 # Difference
 s1.difference(s2)
+
+# 사칙연산
+a = set([1, 1, 2, 3])
+b = {3, 4, 5, 6, 7, 7, 7}
+a.add(3)
+b.remove(7)
+print("a", a)
+print("b", b)
+print("a & b", a & b)
+print("a | b", a | b)
+print("a - b", a - b)
 ```
 
 # Dictionary
@@ -349,6 +375,8 @@ person.clear()
 - collections.defaultdict()  
 - similar to dict, but has pre-specified initial value  
 ```python
+import collections
+
 counts = collections.defaultdict(int)
 counts['a'] = + 1  	# {'a': 1}
 ```
@@ -357,6 +385,8 @@ counts['a'] = + 1  	# {'a': 1}
 - Useful classes for counting data, expanded dict(dict's methods are available)  
 - `most_common()`: returns an array sorted by the highest number of data  
 ```python
+from collections import Counter
+
 Counter('hello world')   # Counter({'l': 3, 'o': 2, 'h': 1, 'e': 1, ' ': 1, 'w': 1, 'r': 1, 'd': 1})
 
 Counter('hello world').most_common(1)   # [('l', 3)]
@@ -401,7 +431,18 @@ def print_kwargs(**kwargs):
 print_kwargs(a=1)  # became dict {'a': 1}
 
 # lamda function is similar to JS arrow function
-getSum2 = lamda num1, num2: num1 + num2
+res = (lambda a, b: a + b)(3, 6)
+print(res)
+getSum2 = lambda num1, num2: num1 + num2
+
+# global 변수
+a = 0
+def func():
+    global a
+    a += 1
+for i in range(10):
+    func()
+print(a)
 
 ```
 
@@ -502,6 +543,17 @@ tuple([1, 2, 3])  # (1, 2, 3)
 # 자료형 체크
 type("abc") # <class 'str'>
 
+# 2진수에서는 0.9를 정확히 표현하기 어려움
+a = 0.3 + 0.6
+print(a)
+print(round(a, 4))
+
+# 사칙연산
+a, b = 5, 2
+print(a / b)
+print(a % b)
+print(a // b)
+print(a ** b)
 ```
 
 # Contidions
@@ -647,6 +699,27 @@ if __name__ == "__main__":
 __name__ == MODULE_NAME  # True
 
  ```
+
+# Input, Output
+```python
+n = int(input())
+data = list(map(int, input().split()))
+
+data.sort(reverse = True)
+print(data)
+
+n, m, k = map(int, input().split())
+print(n, m, k)
+
+# 입력의 개수가 많은경우
+import sys
+data = sys.stdin.readline().rstrip()
+print(data)
+
+answer = 7
+print("정답은 " + str(answer) + " 입니다")
+print(f"정답은 {answer} 입니다")
+```
 
 
 # Files
